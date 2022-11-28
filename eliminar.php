@@ -17,14 +17,8 @@
 
 	$verificar_contraseña= mysqli_query($mysqli,"SELECT *FROM claves WHERE clave='$clave'");
 	if(mysqli_num_rows($verificar_contraseña)<1){
-		echo'
-			<script>
-				alert ("contraseña incorrecta");
-
-			</script>
-			';
-			exit();
-
+		header("Location: index.php?m=31");
+		exit();
 	}else 
 		echo '
 			<script>

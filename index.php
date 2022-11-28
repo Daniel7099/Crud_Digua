@@ -58,9 +58,10 @@
 
 		</script> 
 
-
+		<script src="assets/js/prueba.js"></script>
 
 	</head>
+
 
 	<body>
 		
@@ -206,7 +207,7 @@
 						<script>
 							swal({
 								title: "",
-								text: "Error al eliminar Contacto",
+								text: "Error al eliminar contacto, contraseña incorrecta",
 								icon: "error",
 								value: "confirm",
 								buttons: {
@@ -215,6 +216,9 @@
 								}
 								
 							})
+							.then(function() {
+   							 window.location = "index.php";
+							});
 							</script>
 							<?php
 							break;
@@ -333,21 +337,23 @@
 				</div>
 			</div>
 			
-			<!-- modal -->
+
+
+
 			
+			<script >									
+	$(document).on("click", "#btnmodal",function () {	// script se activa hacer click en el modal (btnmodal) 
+		$('#clave').val(''); 							// limpia el campo clave del modal al cerrarlo
 
-			<script >
-	$(document).on("click", "#btnmodal",function () {
-		
-           var nombre =$(this).data('nom');
+           var nombre =$(this).data('nom');				// se declara una variable donde se guardara lo que le pasamos a data-nom, en este caso la id
 
-		$("#ide").val(nombre);
+		$("#ide").val(nombre);							// busca el input con id="ide" para asiganrle al value la variable nombre, que contiene la id.
 
 	})
 
 </script>
 
-		<!-- Modal2 -->
+		<!-- Modal para eliminacion -->
 		
 		<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
@@ -369,8 +375,7 @@
 						<div class="col-sm-4">
 							<label for="clave">Contraseña para eliminar:</label>
 							<!-- Clave para permitir eliminar contacto-->
-							<input type="password" id="clave" name="clave" maxlength="12" placeholder="ingrese contraseña" autofocus="true" class="form-control" 
-							 required />
+							<input type="password" id="clave" name="clave" maxlength="12" placeholder="ingrese contraseña" autofocus="true" class="form-control" required />
 
 							<input type="text" id="ide" name="ide"  maxlength="12"  autofocus="true" class="form-control" />
 							<!--  id del contacto--><br/>

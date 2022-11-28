@@ -320,7 +320,7 @@
 									<td>
 										<a href="modificar.php?id=<?php echo rawurlencode(openssl_encrypt($row['id'],AES,KEY)) ?>"><span class="btn btn-primary glyphicon glyphicon-pencil"></span></a>
 									<!--	<a href="#" data-href="eliminar.php?id= <?php /*  echo $row['id']; */ ?>"  data-toggle="modal" data-target="#confirm-delete"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a> -->
-										<a href="#" data-href="eliminar.php?id=<?php  echo $row['id']; ?>" data-id=<?php  echo $row['id']; ?> data-toggle="modal" data-target="#confirm-delete"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+										<a href="#" id="btnmodal" data-nom="<?php  echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete" ><span class="btn btn-danger glyphicon glyphicon-trash elim"></span></a>
 
 									</tr>
 								<?php 
@@ -336,7 +336,16 @@
 			<!-- modal -->
 			
 
+			<script >
+	$(document).on("click", "#btnmodal",function () {
 		
+           var nombre =$(this).data('nom');
+
+		$("#ide").val(nombre);
+
+	})
+
+</script>
 
 		<!-- Modal2 -->
 		
@@ -360,23 +369,25 @@
 						<div class="col-sm-4">
 							<label for="clave">Contraseña para eliminar:</label>
 							<!-- Clave para permitir eliminar contacto-->
-							<input type="password" id="clave" name="clave" maxlength="12" placeholder="ingrese contraseña" autofocus="true" class="form-control" required/>
+							<input type="password" id="clave" name="clave" maxlength="12" placeholder="ingrese contraseña" autofocus="true" class="form-control" 
+							 required />
 
-							<input type="text" id="id" name="id" value ="" maxlength="12"  autofocus="true" class="form-control" />
+							<input type="text" id="ide" name="ide"  maxlength="12"  autofocus="true" class="form-control" />
 							<!--  id del contacto--><br/>
 							<!--<input type="text"  value="" id="id" name="id" maxlength="12" autofocus="true" class="form-control" required/> -->
 						</div>
 					</div>
                     </p>
-
-							<input onclick="" type="submit" class="btn btn-danger"   value="Verificar Clave"/>
-					</form>	 
-					
 						<div class="modal-footer">
+							<input type="submit" class="btn btn-danger btn-ok"  value="Eliminar"/>
+
 							<button type="button" class="btn btn-default" data-dismiss="modal" >Cancelar</button>
 							
-							<a type="submit" onclick="evaluar()"  class="btn btn-danger btn-ok">Eliminar</a>
 						</div>
+							
+					</form>	 
+					
+						
 
 
 					

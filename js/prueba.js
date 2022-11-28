@@ -132,7 +132,32 @@ var caja2 = document.getElementById("caja2");
 
 
 
-$('#my_modal').on('show.bs.modal', function(e) {
+$('#confirm-delete').on('show.bs.modal', function(e) {
     var bookId = $(e.relatedTarget).data('book-id');
     $(e.currentTarget).find('input[name="bookId"]').val(bookId);
 });
+
+
+$(document).ready(function(){
+    $(document).on('click','.elim',function(){
+        var id=$(this).val();
+        var ide = $('#id'+id).text();
+
+
+        $('#elim').modal('show');
+        $('#eid').val('ide');
+    });
+
+});
+
+$(document).on("click", "#btnmodal",function () {
+		
+    var ide =$(this).data('nom');
+
+
+    $("#ide").val(ide);
+
+
+
+ 
+})

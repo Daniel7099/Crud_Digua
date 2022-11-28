@@ -5,14 +5,13 @@
 
 
 
-	$id = $_REQUEST['id'];
-	$clave = $_REQUEST['clave'];
-	$pass = $_POST['pass'];
+	$id = $_POST['ide'];
+	$clave = $_POST['clave'];
+
 	echo 'la clave es:',$clave;
 	echo "<br/>";
-	echo 'el id es :',$id;
-	echo "<br/>";
-	echo 'la pass es :',$pass;
+	echo 'el ide es :',$id;
+
 
 
 
@@ -33,10 +32,10 @@
 			</script>
 			';
 
-	$sql = "DELETE FROM contactos WHERE id = '$id'";
-	$resultado = $mysqli->query($sql);
-	header("Location: index.php?m=3");
-	
+			$sql = "DELETE FROM contactos WHERE id = '$id'";
+			$resultado = $mysqli->query($sql);
+			header("Location: index.php?m=3");
+			
 
 	/*
 	if($id == null or $id == ""){

@@ -377,7 +377,7 @@
 							<!-- Clave para permitir eliminar contacto-->
 							<input type="password" id="clave" name="clave" maxlength="12" placeholder="ingrese contraseña" autofocus="true" class="form-control" required />
 
-							<input type="text" id="ide" name="ide"  maxlength="12"  autofocus="true" class="form-control" />
+							<input type="hidden" id="ide" name="ide"  maxlength="12"  autofocus="true" class="form-control" />
 							<!--  id del contacto--><br/>
 							<!--<input type="text"  value="" id="id" name="id" maxlength="12" autofocus="true" class="form-control" required/> -->
 						</div>

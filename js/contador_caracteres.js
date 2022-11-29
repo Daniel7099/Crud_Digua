@@ -11,7 +11,7 @@ function countChars_nombre(obj){    // Funcion contador para campo Nombre
     document.getElementById("charNumN").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumN").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumN").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumN").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -31,7 +31,7 @@ function countChars_apellido(obj){    // Funcion contador para campo Nombre
     document.getElementById("charNumA").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumA").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumA").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumA").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -51,7 +51,7 @@ function countChars_correo(obj){    // Funcion contador para campo Correo
     document.getElementById("charNumC").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumC").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumC").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumC").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -71,7 +71,7 @@ function countChars_telefono(obj){    // Funcion contador para campo telefono
     document.getElementById("charNumT").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumT").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumT").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumT").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -92,7 +92,7 @@ function countChars_telefono2(obj){    // Funcion contador para campo telefono2
     document.getElementById("charNumT2").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumT2").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumT2").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumT2").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -114,7 +114,7 @@ function countChars_Celular(obj){    // Funcion contador para campo telefono2
     document.getElementById("charNumCe").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumCe").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumCe").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumCe").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -135,7 +135,7 @@ function countChars_direccion(obj){    // Funcion contador para campo Direccion
     document.getElementById("charNumDi").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumDi").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumDi").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumDi").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -156,7 +156,7 @@ function countChars_empresarubro(obj){    // Funcion contador para campo Empresa
     document.getElementById("charNumEm").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain < 6 &&  charRemain > 0 ){
-    document.getElementById("charNumEm").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+    document.getElementById("charNumEm").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
     document.getElementById("charNumEm").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
@@ -177,7 +177,7 @@ if(charRemain < 11 &&  charRemain > 5 ){
 document.getElementById("charNum").innerHTML = '<span class ="contador" style="color: blue;">Caracteres restantes: '+charRemain+'</span>';
 }
 else if(charRemain < 6 &&  charRemain > 0 ){
-document.getElementById("charNum").innerHTML = '<span class ="contador" style="color: red;">se aproxima al limite de caracteres: '+charRemain+' caracteres</span>';
+document.getElementById("charNum").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
 }
 else if(charRemain == 0){
 document.getElementById("charNum").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';

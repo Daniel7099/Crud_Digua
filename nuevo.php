@@ -36,6 +36,7 @@
                     float: right;
                     color: #555555;
                     font-style: italic;
+                    font-size: 12px;
                     }
 				</style>
 			

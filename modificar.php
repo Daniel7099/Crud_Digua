@@ -94,11 +94,11 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="nombre">Nombres:</label>
-                        <input type="text" onkeyup="countChars_nombre(this);"name="nombre" maxlength="40" value="<?php echo $row['nombre']; ?>"placeholder="Nombre" autofocus="true" class="form-control" required pattern="[A-Za-z ]+" title="Los nombres tienen que ser hasta 40 digitos y solo es posible contener letras." />
+                        <input type="text" id="nombre" onkeyup="countChars_nombre(this);"name="nombre" maxlength="40" value="<?php echo $row['nombre']; ?>" placeholder="Nombre" autofocus="true" class="form-control" required pattern="[A-Za-z ]+" title="Los nombres tienen que ser hasta 40 digitos y solo es posible contener letras." />
  				</div>
 				 <div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumN"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumN"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -109,11 +109,11 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="apellido">Apellidos:</label>
-                        <input type="text" onkeyup="countChars_apellido(this);" name="apellido" maxlength="40" value="<?php echo $row['apellido']; ?>"placeholder="Apellido" autofocus="true" class="form-control" pattern="[A-Za-z ]+" title="Los apellidos tienen que ser hasta 40 digitos y solo es posible contener letras."/>
+                        <input type="text" id="apellido" onkeyup="countChars_apellido(this);" name="apellido" maxlength="40" value="<?php echo $row['apellido']; ?>"placeholder="Apellido" autofocus="true" class="form-control" pattern="[A-Za-z ]+" title="Los apellidos tienen que ser hasta 40 digitos y solo es posible contener letras."/>
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumA"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumA"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -124,12 +124,12 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="correo">E-Mail:</label>
-                        <input type="email" onkeyup="countChars_correo(this);" name="correo" maxlength="50" value="<?php echo $row['correo']; ?>"placeholder="E-Mail" class="form-control" 
+                        <input type="email" id="correo" onkeyup="countChars_correo(this);" name="correo" maxlength="50" value="<?php echo $row['correo']; ?>"placeholder="E-Mail" class="form-control" 
 						pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="El e-mail puede ser hasta 50 digitos. Solo puede contener letras, numeros, puntos y guiones bajos." />
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumC"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumC"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -140,12 +140,12 @@
 			<div class="row">
  				<div class="col-sm-4">
                     <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="" onkeyup="countChars_telefono(this);" name="telefono" maxlength="15" value="<?php echo $row['telefono']; ?>" placeholder="Teléfono" class="form-control" required
+                        <input type="tel" id="telefono" onkeyup="countChars_telefono(this);" name="telefono" maxlength="15" value="<?php echo $row['telefono']; ?>" placeholder="Teléfono" class="form-control" required
 						title="El telefono tiene que ser hasta 15 digitos y solo puede contener numeros."oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumT"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumT"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -156,12 +156,12 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="telefono2">Teléfono2:</label>
-                        <input type="tel" id="" onkeyup="countChars_telefono2(this);" name="telefono2" maxlength="15" value="<?php echo $row['telefono2']; ?>"placeholder="Telefono2" autofocus="true" class="form-control"
+                        <input type="tel" id="telefono2" onkeyup="countChars_telefono2(this);" name="telefono2" maxlength="15" value="<?php echo $row['telefono2']; ?>"placeholder="Telefono2" autofocus="true" class="form-control"
 						title="El telefono2 tiene que ser hasta 15 digitos y solo puede contener numeros." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumT2"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumT2"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -172,12 +172,12 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="celular">Celular:</label>
-                        <input type="tel" onkeyup="countChars_Celular(this);" name="celular" maxlength="15" value="<?php echo $row['celular']; ?>"placeholder="Celular" autofocus="true" class="form-control" 
+                        <input type="tel" id="celular" onkeyup="countChars_Celular(this);" name="celular" maxlength="15" value="<?php echo $row['celular']; ?>"placeholder="Celular" autofocus="true" class="form-control" 
 						title="El celular tiene que ser hasta 15 digitos y solo puede contener numeros." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumCe"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumCe"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -188,12 +188,12 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="direccion">Dirección:</label>
-                        <input type="text" onkeyup="countChars_direccion(this);" name="direccion" maxlength="50" value="<?php echo $row['direccion']; ?>"placeholder="Direccion" autofocus="true" class="form-control"
+                        <input type="text" id="direccion" onkeyup="countChars_direccion(this);" name="direccion" maxlength="50" value="<?php echo $row['direccion']; ?>"placeholder="Direccion" autofocus="true" class="form-control"
 						title="La direccion tiene que ser hasta 50 digitos.Puede contener letras, numeros, signos, guiones. puntos." />
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumDi"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumDi"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -204,12 +204,12 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="empresa">Empresa/Rubro:</label>
-                        <input type="text" onkeyup="countChars_empresarubro(this);" name="empresa" maxlength="40" value="<?php echo $row['empresa']; ?>"placeholder="Empresa" autofocus="true" class="form-control"
+                        <input type="text" id="empresa" onkeyup="countChars_empresarubro(this);" name="empresa" maxlength="40" value="<?php echo $row['empresa']; ?>"placeholder="Empresa" autofocus="true" class="form-control"
 						title="La Empresa o Rubro tiene que ser hasta 40 digitos. Solo puede contener letras y numeros." pattern="[A-Za-z0-9]+"/>
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNumEm"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNumEm"></b></span>
                         <div id=""></div>
                     </div>
                     </div>
@@ -226,7 +226,7 @@
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
-                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b id="charNum"></b></span>
+                        <span class="" id="" style="color:black;position: absolute;margin-top: 25px;"><b style="display: none;" id="charNum"></b></span>
                         <div ></div>
                     </div>
                 </div>
@@ -244,6 +244,7 @@
 		</div>
 		<script src="js/app.js"></script>
 		<script src="js/prueba.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="js/contador_caracteres.js"></script>	
 		<script src="js/sweetalert.js"></script>	
 		

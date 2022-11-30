@@ -156,8 +156,9 @@ $(document).on("click", "#btnmodal",function () {
 
 
     $("#ide").val(ide);
-
-
-
- 
 })
+
+
+
+
+

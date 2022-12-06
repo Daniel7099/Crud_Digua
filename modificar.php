@@ -88,7 +88,7 @@
 
 				</style>
 			
-			<form class="form-horizontal" method="POST" action="update.php" autocomplete="off">
+			<form class="form-horizontal" method="POST" id="formM" action="update.php" autocomplete="off">
 
 					<p>
 			<div class="row">
@@ -109,7 +109,7 @@
 			<div class="row">
  				<div class="col-sm-4">
                         <label for="apellido">Apellidos:</label>
-                        <input type="text" id="apellido" onkeyup="countChars_apellido(this);" name="apellido" maxlength="40" value="<?php echo $row['apellido']; ?>"placeholder="Apellido" autofocus="true" class="form-control" pattern="[A-Za-z ]+" title="Los apellidos tienen que ser hasta 40 digitos y solo es posible contener letras."/>
+                        <input type="text" id="apellido" onkeyup="countChars_apellido(this);" name="apellido" maxlength="40" value="<?php echo $row['apellido']; ?>"placeholder="Apellido" autofocus="true" class="form-control" required pattern="[A-Za-z ]+" title="Los apellidos tienen que ser hasta 40 digitos y solo es posible contener letras."/>
 				</div>
 				<div class="col-lg-3">
                     <div class="form-group">
@@ -140,7 +140,7 @@
 			<div class="row">
  				<div class="col-sm-4">
                     <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono" onkeyup="countChars_telefono(this);" name="telefono" maxlength="15" value="<?php echo $row['telefono']; ?>" placeholder="Teléfono" class="form-control" required
+                        <input type="tel" id="telefono" onkeyup="countChars_telefono(this);" name="telefono" maxlength="15" value="<?php echo $row['telefono']; ?>" placeholder="Teléfono" class="form-control"
 						title="El telefono tiene que ser hasta 15 digitos y solo puede contener numeros."oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 				</div>
 				<div class="col-lg-3">
@@ -236,8 +236,8 @@
 					<hr/>
 				
 				<input type="hidden" id="id" name="id" value="<?php echo openssl_encrypt($row['id'],AES,KEY) ?>" />
-
-				<input type="submit"data-toggle="modal"href="#ventana1" onclick="eliminaEspacios();" value="Guardar" class="btn btn-primary"/>
+				<h6> <b>*Se debe tener completado a lo menos un campo de telefono o celular para habilitar el boton guardar y modificar contacto</b></h6>
+				<input type="submit"data-toggle="modal"href="#ventana1" id="btnMod" onclick="eliminaEspacios();" value="Guardar" class="btn btn-primary"/>
 				<a class="btn btn-danger" href="index.php">Cancelar</a>
 
 			</form>

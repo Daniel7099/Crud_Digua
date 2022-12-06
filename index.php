@@ -108,7 +108,7 @@
 
 							}
 
-							@media (max-width: 30em) {
+							@media (max-width: 50em) {
 								.table.datatable {
 								border-collapse: collapse;
 								border-spacing: 0;

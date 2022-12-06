@@ -79,17 +79,17 @@ function prueba(){
                     type: "POST",
                     async: true,
                     data: {
-                      pass : pass} ,
-                          success: function(result) {
-                             $('#resultado').html(result);
-      
-                          },
-                          error: function(result) {
-      
+                        pass : pass} ,
+                            success: function(result) {
+                            $('#resultado').html(result);
+
+                            },
+                        error: function(result) {
+
                         $('#resultado').html('Se ha producido un error.');
-                          }
+                        }
                     });
-      
+
             })
         });
 

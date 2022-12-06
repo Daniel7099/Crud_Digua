@@ -15,7 +15,7 @@ function countChars_nombre(obj){    // Funcion contador para campo Nombre
     document.getElementById("charNumN").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumN").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumN").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumN").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -35,7 +35,7 @@ function countChars_apellido(obj){    // Funcion contador para campo Nombre
     document.getElementById("charNumA").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumA").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumA").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumA").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -55,7 +55,7 @@ function countChars_correo(obj){    // Funcion contador para campo Correo
     document.getElementById("charNumC").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumC").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumC").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumC").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -75,7 +75,7 @@ function countChars_telefono(obj){    // Funcion contador para campo telefono
     document.getElementById("charNumT").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumT").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumT").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumT").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -96,7 +96,7 @@ function countChars_telefono2(obj){    // Funcion contador para campo telefono2
     document.getElementById("charNumT2").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumT2").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumT2").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumT2").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -118,13 +118,12 @@ function countChars_Celular(obj){    // Funcion contador para campo telefono2
     document.getElementById("charNumCe").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumCe").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumCe").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumCe").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
     }
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //Direccion
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 function countChars_direccion(obj){    // Funcion contador para campo Direccion
@@ -139,7 +138,7 @@ function countChars_direccion(obj){    // Funcion contador para campo Direccion
     document.getElementById("charNumDi").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumDi").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumDi").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumDi").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -160,7 +159,7 @@ function countChars_empresarubro(obj){    // Funcion contador para campo Empresa
     document.getElementById("charNumEm").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
     }
     else if(charRemain == 0){
-    document.getElementById("charNumEm").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+    document.getElementById("charNumEm").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
     }else{
     document.getElementById("charNumEm").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
     }
@@ -181,7 +180,7 @@ else if(charRemain < 6 &&  charRemain > 0 ){
 document.getElementById("charNum").innerHTML = '<span class ="contador" style="color: red;">Caracteres restantes: '+charRemain+'</span>';
 }
 else if(charRemain == 0){
-document.getElementById("charNum").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado '+charRemain+' caracteres</span>';
+document.getElementById("charNum").innerHTML = '<span style="color: red;">Limite de caracteres alcanzado: '+charRemain+' caracteres</span>';
 }else{
 document.getElementById("charNum").innerHTML = '<span class ="contador" > Caracteres restantes: '+charRemain+'</span> ';
 }
@@ -302,6 +301,91 @@ $(document).ready(function() {
     });
 });
 
+
+
+$(document).ready(function() {
+    $("#formI input").on("keyup", function() {
+
+        var tele = $("#telefono").val().length
+        var celu = $("#celular").val().length
+
+        
+        // Ocultar o mostrar de acuerdo al largo del texto
+        if (tele > 2 || celu >2) {
+            $("#btnRegistrar").removeAttr('disabled');
+        }
+        else{
+            $("#btnRegistrar").attr('disabled','disabled');
+        }
+    });
+
+});
+
+$(document).ready(function() {
+    $("#formM input").on("keyup", function() {
+
+        var tel = $("#telefono").val().length
+        var cel = $("#celular").val().length
+        var tel2 = $("#telefono2").val().length
+
+        
+        // Ocultar o mostrar de acuerdo al largo del texto
+        if (tel > 2 || cel >2 ||tel2 >2) {
+            $("#btnMod").removeAttr('disabled');
+        }
+        else{
+            $("#btnMod").attr('disabled','disabled');
+        }
+    });
+
+});
+
+
+
+/*
+$(document).ready(function() {
+    $("#celular").on("keyup", function() {
+        var celu =$("#celular").val().length
+
+
+        if(celu != ""){
+            $("#btnRegistrar").removeAttr('disabled');
+        }
+
+        else{
+            $("#btnRegistrar").attr('disabled','disabled');
+        }
+
+
+    })
+})
+*/
+
+
+
+/*
+function toggleButton(){
+$(document).ready(function(){
+            
+                $('#celular').keypress(function(){
+                $('#telefono').keypress()
+                var celu = $('#celular').val();
+                var tele = $('#telefono').val();
+
+                if (tele != "") {
+                    $('#btnRegistrar').removeAttr('disabled');
+                } 
+                else if(celu != ""){
+                    $('#btnRegistrar').removeAttr('disabled');
+                }
+                else{
+                    $('#btnRegistrar').attr('disabled', true);
+                }
+            })
+             })
+            }
+
+*/
 //////////////////////////////////////////////////////////////////////////////////////
 /* Al escribir en el campo nombre o tabular hacia el los demas contador de caracteres se esconden. Asimismo con todos los demas campos */
 

@@ -40,7 +40,7 @@
                     }
 				</style>
 			
-			<form name="form" action="guardar.php" method="post">
+			<form name="form" id="formI"action="guardar.php" method="post">
 
 					<p>
                 <div class="row">
@@ -96,8 +96,8 @@
                 <div class="row">
  				    <div class="col-sm-4">
                     <label for="telefono">Teléfono:</label>
-                        <input type="tel" id ="telefono" onkeyup="countChars_telefono(this);" name="telefono" maxlength="15" placeholder="Teléfono" class="form-control" 
-                        title="El telefono tiene que ser hasta 15 digitos y solo puede contener numeros."  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required/>
+                        <input type="tel" id ="telefono" onkeyup="countChars_telefono(this);" onchange="toggleButton()" name="telefono" maxlength="15"autofocus="true" placeholder="Teléfono" class="form-control" 
+                        title="El telefono tiene que ser hasta 15 digitos y solo puede contener numeros."  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                     </div>
                     <div class="col-lg-3">
                     <div class="form-group">
@@ -128,7 +128,7 @@
                 <div class="row">
  				    <div class="col-sm-4">
                         <label for="celular">Celular:</label>
-                        <input type="tel" id="celular" onkeyup="countChars_Celular(this);" name="celular" maxlength="15" placeholder="Celular" autofocus="true" class="form-control" 
+                        <input type="tel" id="celular" onkeyup="countChars_Celular(this);" onchange="toggleButton()" name="celular" maxlength="15" placeholder="Celular" autofocus="true" class="form-control" 
                         title="El celular tiene que ser hasta 15 digitos y solo puede contener numeros."oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
                     </div>
                     <div class="col-lg-3">
@@ -190,7 +190,8 @@
                     </p>
 
                     <hr/>
-                    <input type="submit" onclick="eliminaEspacios();" name="registrar" id="btnRegistrar" value="Guardar" class="btn btn-primary"/>
+                    <h6> <b>*Se debe completar a lo menos un campo de telefono o celular para habilitar el boton guardar y registrar contacto</b></h6>
+                    <input type="submit" onclick="eliminaEspacios();" name="registrar" id="btnRegistrar" value="Guardar" class="btn btn-primary" disabled title="Por favor ingrese un nombre y uno o mas numeros de telefono o celular para ingresar contacto"/>
 					<a class="btn btn-danger" href="index.php">Cancelar</a>
 				</form>
 		</div>
